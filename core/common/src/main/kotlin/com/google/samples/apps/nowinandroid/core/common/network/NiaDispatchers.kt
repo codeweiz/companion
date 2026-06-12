@@ -1,0 +1,16 @@
+/*
+ * Copyright 2022 microboat. All rights reserved.
+ */
+package com.google.samples.apps.nowinandroid.core.common.network
+
+import javax.inject.Qualifier
+import kotlin.annotation.AnnotationRetention.RUNTIME
+
+@Qualifier
+@Retention(RUNTIME)
+annotation class Dispatcher(val niaDispatcher: NiaDispatchers)
+
+enum class NiaDispatchers {
+    Default,
+    IO,
+}

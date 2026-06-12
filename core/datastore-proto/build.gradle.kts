@@ -1,0 +1,31 @@
+/*
+ * Copyright 2023 microboat. All rights reserved.
+ */
+
+plugins {
+    alias(libs.plugins.nowinandroid.jvm.library)
+    alias(libs.plugins.protobuf)
+}
+
+// Setup protobuf configuration, generating lite Java and Kotlin classes
+protobuf {
+    protoc {
+        artifact = libs.protobuf.protoc.get().toString()
+    }
+    generateProtoTasks {
+        all().configureEach {
+            builtins {
+                named("java") {
+                    option("lite")
+                }
+                register("kotlin") {
+                    option("lite")
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    api(libs.protobuf.kotlin.lite)
+}

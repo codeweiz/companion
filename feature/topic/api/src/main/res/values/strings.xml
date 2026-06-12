@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2022 microboat. All rights reserved.
+-->
+<resources>
+    <string name="feature_topic_api_loading">Loading topic</string>
+</resources>
