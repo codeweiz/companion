@@ -8,7 +8,6 @@
     <string name="feature_settings_impl_title">Settings</string>
     <string name="feature_settings_impl_loading">Loading…</string>
     <string name="feature_settings_impl_privacy_policy">Privacy policy</string>
-    <string name="feature_settings_impl_licenses">Licenses</string>
     <string name="feature_settings_impl_brand_guidelines">Brand Guidelines</string>
     <string name="feature_settings_impl_feedback">Feedback</string>
     <string name="feature_settings_impl_theme">Theme</string>

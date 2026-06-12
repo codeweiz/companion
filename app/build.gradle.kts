@@ -10,7 +10,6 @@ plugins {
     alias(libs.plugins.nowinandroid.android.application.jacoco)
     alias(libs.plugins.nowinandroid.android.application.firebase)
     alias(libs.plugins.nowinandroid.hilt)
-    alias(libs.plugins.google.osslicenses)
     alias(libs.plugins.roborazzi)
     alias(libs.plugins.kotlin.serialization)
 }
@@ -44,6 +43,12 @@ android {
     }
 
     packaging {
+        jniLibs {
+            keepDebugSymbols += setOf(
+                "**/libandroidx.graphics.path.so",
+                "**/libdatastore_shared_counter.so",
+            )
+        }
         resources {
             excludes.add("/META-INF/{AL2.0,LGPL2.1}")
         }

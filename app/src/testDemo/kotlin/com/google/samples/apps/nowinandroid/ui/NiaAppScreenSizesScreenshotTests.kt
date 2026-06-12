@@ -99,6 +99,7 @@ class NiaAppScreenSizesScreenshotTests {
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"))
     }
 
+    @Suppress("DEPRECATION")
     private fun testNiaAppScreenshotWithSize(width: Dp, height: Dp, screenshotName: String) {
         composeTestRule.setContent {
             CompositionLocalProvider(

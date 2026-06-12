@@ -67,6 +67,7 @@ fun NiaTab(
  * inside this lambda will be measured and placed evenly across the row, each taking up equal space.
  */
 @Composable
+@Suppress("DEPRECATION")
 fun NiaTabRow(
     selectedTabIndex: Int,
     modifier: Modifier = Modifier,

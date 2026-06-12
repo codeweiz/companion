@@ -161,6 +161,7 @@ class SnackbarScreenshotTests {
         }
     }
 
+    @Suppress("DEPRECATION")
     private fun testSnackbarScreenshotWithSize(
         width: Dp,
         height: Dp,

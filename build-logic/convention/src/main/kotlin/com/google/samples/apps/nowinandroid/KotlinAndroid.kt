@@ -37,7 +37,9 @@ internal fun Project.configureKotlinAndroid(
         }
     }
 
-    configureKotlin<KotlinAndroidProjectExtension>()
+    configureKotlin<KotlinAndroidProjectExtension>(
+        optInExperimentalCoroutines = true,
+    )
 
     dependencies {
         "coreLibraryDesugaring"(libs.findLibrary("android.desugarJdkLibs").get())
@@ -55,13 +57,17 @@ internal fun Project.configureKotlinJvm() {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
-    configureKotlin<KotlinJvmProjectExtension>()
+    configureKotlin<KotlinJvmProjectExtension>(
+        optInExperimentalCoroutines = false,
+    )
 }
 
 /**
  * Configure base Kotlin options
  */
-private inline fun <reified T : KotlinBaseExtension> Project.configureKotlin() = configure<T> {
+private inline fun <reified T : KotlinBaseExtension> Project.configureKotlin(
+    optInExperimentalCoroutines: Boolean,
+) = configure<T> {
     // Treat all Kotlin warnings as errors (disabled by default)
     // Override by setting warningsAsErrors=true in your ~/.gradle/gradle.properties
     val warningsAsErrors = providers.gradleProperty("warningsAsErrors").map {
@@ -74,9 +80,15 @@ private inline fun <reified T : KotlinBaseExtension> Project.configureKotlin() =
     }.apply {
         jvmTarget = JvmTarget.JVM_11
         allWarningsAsErrors = warningsAsErrors
+        if (optInExperimentalCoroutines) {
+            freeCompilerArgs.add(
+                // Enable experimental coroutines APIs, including Flow.
+                "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
+            )
+        }
         freeCompilerArgs.add(
-            // Enable experimental coroutines APIs, including Flow
-            "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
+            // Match Kotlin 2.3's recommended behavior and silence annotation target migration warnings.
+            "-Xannotation-default-target=param-property",
         )
         freeCompilerArgs.add(
             /**
