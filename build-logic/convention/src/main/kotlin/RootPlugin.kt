@@ -1,8 +1,8 @@
 /*
  * Copyright 2025 microboat. All rights reserved.
  */
-import com.google.samples.apps.nowinandroid.configureGraphTasks
-import com.google.samples.apps.nowinandroid.configureSpotlessForRootProject
+import com.microboat.companion.configureGraphTasks
+import com.microboat.companion.configureSpotlessForRootProject
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.configuration.BuildFeatures

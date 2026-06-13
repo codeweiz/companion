@@ -3,15 +3,15 @@
  */
 
 plugins {
-    alias(libs.plugins.nowinandroid.android.library)
-    alias(libs.plugins.nowinandroid.hilt)
+    alias(libs.plugins.companion.android.library)
+    alias(libs.plugins.companion.hilt)
     alias(libs.plugins.hilt)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.compose)
 }
 
 android {
-    namespace = "com.google.samples.apps.nowinandroid.core.navigation"
+    namespace = "com.microboat.companion.core.navigation"
 }
 
 dependencies {

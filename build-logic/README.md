@@ -29,10 +29,10 @@ setup.
 
 Current list of convention plugins:
 
-- [`nowinandroid.android.application`](convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt),
-  [`nowinandroid.android.library`](convention/src/main/kotlin/AndroidLibraryConventionPlugin.kt),
-  [`nowinandroid.android.test`](convention/src/main/kotlin/AndroidTestConventionPlugin.kt):
+- [`companion.android.application`](convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt),
+  [`companion.android.library`](convention/src/main/kotlin/AndroidLibraryConventionPlugin.kt),
+  [`companion.android.test`](convention/src/main/kotlin/AndroidTestConventionPlugin.kt):
   Configures common Android and Kotlin options.
-- [`nowinandroid.android.application.compose`](convention/src/main/kotlin/AndroidApplicationComposeConventionPlugin.kt),
-  [`nowinandroid.android.library.compose`](convention/src/main/kotlin/AndroidLibraryComposeConventionPlugin.kt):
+- [`companion.android.application.compose`](convention/src/main/kotlin/AndroidApplicationComposeConventionPlugin.kt),
+  [`companion.android.library.compose`](convention/src/main/kotlin/AndroidLibraryComposeConventionPlugin.kt):
   Configures Jetpack Compose options

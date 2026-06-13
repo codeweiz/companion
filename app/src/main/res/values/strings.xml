@@ -3,6 +3,6 @@
      Copyright 2021 microboat. All rights reserved.
 -->
 <resources>
-    <string name="app_name">Now in Android</string>
+    <string name="app_name">Companion</string>
     <string name="not_connected">⚠️ You aren’t connected to the internet</string>
 </resources>

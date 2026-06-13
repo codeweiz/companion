@@ -3,14 +3,14 @@
  */
 
 plugins {
-    alias(libs.plugins.nowinandroid.android.library)
-    alias(libs.plugins.nowinandroid.android.library.jacoco)
-    alias(libs.plugins.nowinandroid.android.room)
-    alias(libs.plugins.nowinandroid.hilt)
+    alias(libs.plugins.companion.android.library)
+    alias(libs.plugins.companion.android.library.jacoco)
+    alias(libs.plugins.companion.android.room)
+    alias(libs.plugins.companion.hilt)
 }
 
 android {
-    namespace = "com.google.samples.apps.nowinandroid.core.database"
+    namespace = "com.microboat.companion.core.database"
 }
 
 dependencies {

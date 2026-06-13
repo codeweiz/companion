@@ -197,19 +197,19 @@ room = { id = "androidx.room", version.ref = "room" }
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
 
 # Plugins defined by this project
-nowinandroid-android-application = { id = "nowinandroid.android.application" }
-nowinandroid-android-application-compose = { id = "nowinandroid.android.application.compose" }
-nowinandroid-android-application-firebase = { id = "nowinandroid.android.application.firebase" }
-nowinandroid-android-application-flavors = { id = "nowinandroid.android.application.flavors" }
-nowinandroid-android-application-jacoco = { id = "nowinandroid.android.application.jacoco" }
-nowinandroid-android-feature-impl = { id = "nowinandroid.android.feature.impl" }
-nowinandroid-android-feature-api = { id = "nowinandroid.android.feature.api" }
-nowinandroid-android-library = { id = "nowinandroid.android.library" }
-nowinandroid-android-library-compose = { id = "nowinandroid.android.library.compose" }
-nowinandroid-android-library-jacoco = { id = "nowinandroid.android.library.jacoco" }
-nowinandroid-android-lint = { id = "nowinandroid.android.lint" }
-nowinandroid-android-room = { id = "nowinandroid.android.room" }
-nowinandroid-android-test = { id = "nowinandroid.android.test" }
-nowinandroid-hilt = { id = "nowinandroid.hilt" }
-nowinandroid-jvm-library = { id = "nowinandroid.jvm.library" }
-nowinandroid-root = { id = "nowinandroid.root" }
+companion-android-application = { id = "companion.android.application" }
+companion-android-application-compose = { id = "companion.android.application.compose" }
+companion-android-application-firebase = { id = "companion.android.application.firebase" }
+companion-android-application-flavors = { id = "companion.android.application.flavors" }
+companion-android-application-jacoco = { id = "companion.android.application.jacoco" }
+companion-android-feature-impl = { id = "companion.android.feature.impl" }
+companion-android-feature-api = { id = "companion.android.feature.api" }
+companion-android-library = { id = "companion.android.library" }
+companion-android-library-compose = { id = "companion.android.library.compose" }
+companion-android-library-jacoco = { id = "companion.android.library.jacoco" }
+companion-android-lint = { id = "companion.android.lint" }
+companion-android-room = { id = "companion.android.room" }
+companion-android-test = { id = "companion.android.test" }
+companion-hilt = { id = "companion.hilt" }
+companion-jvm-library = { id = "companion.jvm.library" }
+companion-root = { id = "companion.root" }

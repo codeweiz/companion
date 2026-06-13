@@ -3,13 +3,13 @@
  */
 
 plugins {
-    alias(libs.plugins.nowinandroid.android.feature.impl)
-    alias(libs.plugins.nowinandroid.android.library.compose)
+    alias(libs.plugins.companion.android.feature.impl)
+    alias(libs.plugins.companion.android.library.compose)
     alias(libs.plugins.roborazzi)
 }
 
 android {
-    namespace = "com.google.samples.apps.nowinandroid.feature.foryou.impl"
+    namespace = "com.microboat.companion.feature.foryou.impl"
     testOptions.unitTests.isIncludeAndroidResources = true
 }
 

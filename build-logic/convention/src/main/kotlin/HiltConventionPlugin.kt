@@ -2,7 +2,7 @@
  * Copyright 2023 microboat. All rights reserved.
  */
 import com.android.build.gradle.api.AndroidBasePlugin
-import com.google.samples.apps.nowinandroid.libs
+import com.microboat.companion.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply

@@ -3,11 +3,11 @@
  */
 
 plugins {
-    alias(libs.plugins.nowinandroid.android.feature.api)
-    alias(libs.plugins.nowinandroid.android.feature.impl)
-    alias(libs.plugins.nowinandroid.android.library.compose)
+    alias(libs.plugins.companion.android.feature.api)
+    alias(libs.plugins.companion.android.feature.impl)
+    alias(libs.plugins.companion.android.library.compose)
 }
 
 android {
-    namespace = "com.google.samples.apps.nowinandroid.feature.topic.api"
+    namespace = "com.microboat.companion.feature.topic.api"
 }

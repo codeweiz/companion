@@ -2,14 +2,14 @@
  * Copyright 2022 microboat. All rights reserved.
  */
 plugins {
-    alias(libs.plugins.nowinandroid.android.library)
-    alias(libs.plugins.nowinandroid.android.library.jacoco)
-    alias(libs.plugins.nowinandroid.hilt)
+    alias(libs.plugins.companion.android.library)
+    alias(libs.plugins.companion.android.library.jacoco)
+    alias(libs.plugins.companion.hilt)
     id("kotlinx-serialization")
 }
 
 android {
-    namespace = "com.google.samples.apps.nowinandroid.core.data"
+    namespace = "com.microboat.companion.core.data"
     testOptions.unitTests.isIncludeAndroidResources = true
 }
 

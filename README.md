@@ -1,6 +1,6 @@
 # Companion
 
-`companion` is an Android app project bootstrapped from `nowinandroid` and trimmed to keep the
+`companion` is an Android app project bootstrapped from `companion` and trimmed to keep the
 main application, modular architecture, and developer-critical quality gates.
 
 ## Scope

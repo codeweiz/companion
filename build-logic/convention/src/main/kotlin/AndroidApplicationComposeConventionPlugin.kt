@@ -2,7 +2,7 @@
  * Copyright 2022 microboat. All rights reserved.
  */
 import com.android.build.api.dsl.ApplicationExtension
-import com.google.samples.apps.nowinandroid.configureAndroidCompose
+import com.microboat.companion.configureAndroidCompose
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply

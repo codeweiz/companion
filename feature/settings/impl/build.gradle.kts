@@ -3,13 +3,13 @@
  */
 
 plugins {
-    alias(libs.plugins.nowinandroid.android.feature.impl)
-    alias(libs.plugins.nowinandroid.android.library.compose)
-    alias(libs.plugins.nowinandroid.android.library.jacoco)
+    alias(libs.plugins.companion.android.feature.impl)
+    alias(libs.plugins.companion.android.library.compose)
+    alias(libs.plugins.companion.android.library.jacoco)
 }
 
 android {
-    namespace = "com.google.samples.apps.nowinandroid.feature.settings.impl"
+    namespace = "com.microboat.companion.feature.settings.impl"
 }
 
 dependencies {

@@ -2,13 +2,13 @@
  * Copyright 2022 microboat. All rights reserved.
  */
 plugins {
-    alias(libs.plugins.nowinandroid.android.library)
-    alias(libs.plugins.nowinandroid.android.library.jacoco)
+    alias(libs.plugins.companion.android.library)
+    alias(libs.plugins.companion.android.library.jacoco)
     id("com.google.devtools.ksp")
 }
 
 android {
-    namespace = "com.google.samples.apps.nowinandroid.core.domain"
+    namespace = "com.microboat.companion.core.domain"
 }
 
 dependencies {

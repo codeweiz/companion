@@ -1,37 +1,37 @@
 /*
  * Copyright 2022 microboat. All rights reserved.
  */
-import com.google.samples.apps.nowinandroid.NiaBuildType
+import com.microboat.companion.AppBuildType
 
 plugins {
-    alias(libs.plugins.nowinandroid.android.application)
-    alias(libs.plugins.nowinandroid.android.application.compose)
-    alias(libs.plugins.nowinandroid.android.application.flavors)
-    alias(libs.plugins.nowinandroid.android.application.jacoco)
-    alias(libs.plugins.nowinandroid.android.application.firebase)
-    alias(libs.plugins.nowinandroid.hilt)
+    alias(libs.plugins.companion.android.application)
+    alias(libs.plugins.companion.android.application.compose)
+    alias(libs.plugins.companion.android.application.flavors)
+    alias(libs.plugins.companion.android.application.jacoco)
+    alias(libs.plugins.companion.android.application.firebase)
+    alias(libs.plugins.companion.hilt)
     alias(libs.plugins.roborazzi)
     alias(libs.plugins.kotlin.serialization)
 }
 
 android {
     defaultConfig {
-        applicationId = "com.google.samples.apps.nowinandroid"
+        applicationId = "com.microboat.companion"
         versionCode = 8
         versionName = "0.1.2" // X.Y.Z; X = Major, Y = minor, Z = Patch level
 
         // Custom test runner to set up Hilt dependency graph
-        testInstrumentationRunner = "com.google.samples.apps.nowinandroid.core.testing.NiaTestRunner"
+        testInstrumentationRunner = "com.microboat.companion.core.testing.AppTestRunner"
     }
 
     buildTypes {
         debug {
-            applicationIdSuffix = NiaBuildType.DEBUG.applicationIdSuffix
+            applicationIdSuffix = AppBuildType.DEBUG.applicationIdSuffix
         }
         release {
             isMinifyEnabled = providers.gradleProperty("minifyWithR8")
                 .map(String::toBooleanStrict).getOrElse(true)
-            applicationIdSuffix = NiaBuildType.RELEASE.applicationIdSuffix
+            applicationIdSuffix = AppBuildType.RELEASE.applicationIdSuffix
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"),
                           "proguard-rules.pro")
 
@@ -54,7 +54,7 @@ android {
         }
     }
     testOptions.unitTests.isIncludeAndroidResources = true
-    namespace = "com.google.samples.apps.nowinandroid"
+    namespace = "com.microboat.companion"
 }
 
 dependencies {

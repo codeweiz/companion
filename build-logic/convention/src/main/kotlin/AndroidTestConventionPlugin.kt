@@ -2,8 +2,8 @@
  * Copyright 2022 microboat. All rights reserved.
  */
 import com.android.build.api.dsl.TestExtension
-import com.google.samples.apps.nowinandroid.configureGradleManagedDevices
-import com.google.samples.apps.nowinandroid.configureKotlinAndroid
+import com.microboat.companion.configureGradleManagedDevices
+import com.microboat.companion.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply
