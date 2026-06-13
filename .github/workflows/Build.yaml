@@ -138,18 +138,25 @@ jobs:
           name: lint-reports
           path: '**/build/reports/lint-results-*.html'
 
-      - name: Upload lint SARIF for app
-        if: ${{ !cancelled() && hashFiles('app/**/*.sarif') != '' }}
-        uses: github/codeql-action/upload-sarif@v3
+      - name: Upload lint SARIF for demoDebug app
+        if: ${{ !cancelled() && hashFiles('app/build/reports/lint-results-demoDebug.sarif') != '' }}
+        uses: github/codeql-action/upload-sarif@v4
         with:
-          sarif_file: ./app/
-          category: app
+          sarif_file: app/build/reports/lint-results-demoDebug.sarif
+          category: app-demoDebug
+
+      - name: Upload lint SARIF for prodRelease app
+        if: ${{ !cancelled() && hashFiles('app/build/reports/lint-results-prodRelease.sarif') != '' }}
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: app/build/reports/lint-results-prodRelease.sarif
+          category: app-prodRelease
 
       - name: Upload lint SARIF for lint module
         if: ${{ !cancelled() && hashFiles('lint/**/*.sarif') != '' }}
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         with:
-          sarif_file: ./lint/
+          sarif_file: lint/build/reports/lint-results.sarif
           category: lint
 
   androidTest:
