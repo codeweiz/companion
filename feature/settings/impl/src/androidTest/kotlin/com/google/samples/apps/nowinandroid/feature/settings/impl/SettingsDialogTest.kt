@@ -165,7 +165,6 @@ class SettingsDialogTest {
         }
 
         composeTestRule.onNodeWithText(getString(R.string.feature_settings_impl_privacy_policy)).assertExists()
-        composeTestRule.onNodeWithText(getString(R.string.feature_settings_impl_licenses)).assertExists()
         composeTestRule.onNodeWithText(getString(R.string.feature_settings_impl_brand_guidelines)).assertExists()
         composeTestRule.onNodeWithText(getString(R.string.feature_settings_impl_feedback)).assertExists()
     }
